@@ -117,6 +117,5 @@ namespace RealEstateManager.Database
                 db.SaveChanges();
             }
         }
-        }
     }
 }
