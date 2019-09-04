@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GraphiQl;
 using GraphQL;
 using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
@@ -61,7 +62,7 @@ namespace RealEstateManager
             }
 
             app.UseHttpsRedirection();
-            //app.UseGraphQl();
+            app.UseGraphiQl();
             app.UseMvc();
 
             realEstateContext.EnsureSeedData();
