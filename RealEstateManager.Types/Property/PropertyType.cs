@@ -1,14 +1,15 @@
 ﻿using GraphQL.Types;
 using RealEstateManager.DataAccesss.Repositories.Contracts;
 using RealEstateManager.Database.Models;
+using RealEstateManager.Types.Payment;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace RealEstateManager.Types
+namespace RealEstateManager.Types.Property
 {
-    public class PropertyType : ObjectGraphType<Property>
+    public class PropertyType : ObjectGraphType<Database.Models.Property>
     {
         public PropertyType(IPaymentRepository paymentRepository)
         {
@@ -19,7 +20,8 @@ namespace RealEstateManager.Types
             Field(x => x.Street);
             Field<ListGraphType<PaymentType>>("payments",
                 arguments: new QueryArguments(new QueryArgument<IntGraphType> { Name = "last", Description = "teste" }),
-                resolve: context => {
+                resolve: context =>
+                {
                     var lastItemsFilter = context.GetArgument<int?>("last");
                     return lastItemsFilter != null
                         ? paymentRepository.GetAllForProperty(context.Source.Id, lastItemsFilter.Value)

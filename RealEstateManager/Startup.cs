@@ -20,7 +20,7 @@ using RealEstateManager.Database;
 using RealEstateManager.Mutations;
 using RealEstateManager.Queries;
 using RealEstateManager.Schema;
-using RealEstateManager.Types;
+using RealEstateManager.Types.Payment;
 using RealEstateManager.Types.Property;
 
 namespace RealEstateManager

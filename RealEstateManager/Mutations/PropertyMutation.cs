@@ -1,7 +1,6 @@
 ﻿using GraphQL.Types;
 using RealEstateManager.DataAccesss.Repositories.Contracts;
 using RealEstateManager.Database.Models;
-using RealEstateManager.Types;
 using RealEstateManager.Types.Property;
 using System;
 using System.Collections.Generic;

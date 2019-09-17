@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace RealEstateManager.Types
+namespace RealEstateManager.Types.Payment
 {
-    public class PaymentType : ObjectGraphType<Payment>
+    public class PaymentType : ObjectGraphType<Database.Models.Payment>
     {
         public PaymentType()
         {
