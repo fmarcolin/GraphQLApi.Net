@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using GraphQL;
+﻿using GraphQL;
 using GraphQL.Types;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RealEstateManager.Utilities;
+using System;
+using System.Threading.Tasks;
 
 namespace RealEstateManager.Controllers
 {

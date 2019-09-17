@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace RealEstateManager.Database.Models
 {
     public class Property
     {
-        public int Id{ get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
         public string Street { get; set; }

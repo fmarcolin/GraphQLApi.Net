@@ -1,9 +1,7 @@
 ﻿using RealEstateManager.Database.Models;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace RealEstateManager.Database
 {
@@ -11,7 +9,7 @@ namespace RealEstateManager.Database
     {
         public static void EnsureSeedData(this RealEstateContext db)
         {
-            if(!db.Properties.Any() || !db.Payments.Any())
+            if (!db.Properties.Any() || !db.Payments.Any())
             {
                 var properties = new List<Property>
                 {

@@ -1,11 +1,6 @@
 ﻿using GraphQL.Types;
 using RealEstateManager.DataAccesss.Repositories.Contracts;
-using RealEstateManager.Database.Models;
 using RealEstateManager.Types.Payment;
-using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace RealEstateManager.Types.Property
 {

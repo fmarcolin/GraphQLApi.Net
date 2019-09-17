@@ -1,8 +1,4 @@
 ﻿using GraphQL.Types;
-using RealEstateManager.Database.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace RealEstateManager.Types.Payment
 {

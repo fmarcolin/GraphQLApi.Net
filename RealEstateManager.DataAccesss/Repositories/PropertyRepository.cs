@@ -1,10 +1,8 @@
 ﻿using RealEstateManager.DataAccesss.Repositories.Contracts;
 using RealEstateManager.Database;
 using RealEstateManager.Database.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace RealEstateManager.DataAccesss.Repositories
 {
