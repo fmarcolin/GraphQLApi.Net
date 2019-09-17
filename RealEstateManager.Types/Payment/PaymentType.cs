@@ -6,16 +6,15 @@ using System.Text;
 
 namespace RealEstateManager.Types
 {
-    public class PropertyType : ObjectGraphType<Property>
+    public class PaymentType : ObjectGraphType<Payment>
     {
-        public PropertyType()
+        public PaymentType()
         {
             Field(x => x.Id);
-            Field(x => x.Name);
-            Field(x => x.Family);
-            Field(x => x.City);
             Field(x => x.Value);
-            Field(x => x.Street);
+            Field(x => x.DateCreated);
+            Field(x => x.DateOverdue);
+            Field(x => x.Paid);
         }
     }
 }

@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RealEstateManager.DataAccesss\RealEstateManager.DataAccesss.csproj" />
     <ProjectReference Include="..\RealEstateManager.Database\RealEstateManager.Database.csproj" />
   </ItemGroup>
 

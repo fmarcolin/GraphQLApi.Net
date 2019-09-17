@@ -11,5 +11,7 @@ namespace RealEstateManager.Database.Models
         public DateTime DateCreated { get; set; }
         public DateTime DateOverdue { get; set; }
         public bool Paid { get; set; }
+        public Property Property { get; set; }
+        public int PropertyId { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using GraphQL;
+using RealEstateManager.Mutations;
 using RealEstateManager.Queries;
 
 namespace RealEstateManager.Schema
@@ -9,6 +10,7 @@ namespace RealEstateManager.Schema
             :base(resolver)
         {
             Query = resolver.Resolve<PropertyQuery>();
+            Mutation = resolver.Resolve<PropertyMutation>();
         }
     }
 }

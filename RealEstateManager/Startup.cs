@@ -17,9 +17,11 @@ using Microsoft.Extensions.Options;
 using RealEstateManager.DataAccesss.Repositories;
 using RealEstateManager.DataAccesss.Repositories.Contracts;
 using RealEstateManager.Database;
+using RealEstateManager.Mutations;
 using RealEstateManager.Queries;
 using RealEstateManager.Schema;
 using RealEstateManager.Types;
+using RealEstateManager.Types.Property;
 
 namespace RealEstateManager
 {
@@ -38,11 +40,15 @@ namespace RealEstateManager
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddTransient<IPropertyRepository, PropertyRepository>();
+            services.AddTransient<IPaymentRepository, PaymentRepository>();
 
             services.AddDbContext<RealEstateContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:RealEstateDb"]));
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<PropertyQuery>();
+            services.AddSingleton<PropertyMutation>();
             services.AddSingleton<PropertyType>();
+            services.AddSingleton<PropertyInputType>();
+            services.AddSingleton<PaymentType>();
 
             var serviceProvider = services.BuildServiceProvider();
             services.AddSingleton<ISchema>(new RealEstateSchema(new FuncDependencyResolver(type => serviceProvider.GetService(type))));

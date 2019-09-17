@@ -10,7 +10,7 @@ using RealEstateManager.Utilities;
 
 namespace RealEstateManager.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class GraphQLController : ControllerBase
     {
@@ -39,7 +39,7 @@ namespace RealEstateManager.Controllers
 
             var result = await _documentExecuter.ExecuteAsync(executionOptions);
 
-            if (result.Errors.Any())
+            if (result.Errors?.Count > 0)
                 return BadRequest(result);
             return Ok(result);
         }
